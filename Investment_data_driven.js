@@ -447,13 +447,7 @@ function verify_investment_transaction(){
       let vselect = browser.pageTrans.formFrmtrans;
       let locator = browser.pageTrans.formFrmtrans;
       let document = browser.pageTrans.formFrmtrans;
-      //check transactions
-      //to do
-      //paste
-      //search
-      //set date
-      
-      
+ 
   
 }
 
@@ -480,19 +474,19 @@ function add_new_internal_payee(){
 }
 
 
-function add_new_local_payee()
+function add_new_local_payee(var_payee_name, var_payee_alias, var_payee_bank_name, var_payee_account_info)
 {
           //payee name
           let textbox = vselect.textboxPayeename;
           textbox.Click();
-          textbox.Keys("Jackson Industries");
+          textbox.Keys(var_payee_name);
           //payee alias
           textbox = vselect.textboxPayeejmmbaccountalias;
           textbox.Click();
-          textbox.SetText("ja industry");
+          textbox.SetText(var_payee_alias);
           //select Company
           let vselect2 = vselect.selectPayeecompanies;
-          vselect2.ClickItem("JMMB Bank"); //
+          vselect2.ClickItem(var_payee_bank_name); //
           textbox = vselect.textboxPayeejmmbaccount;
           textbox.Click();
           //payee account number
@@ -570,24 +564,4 @@ function add_new_international_payee()
   textbox.SetText(var_intermediary_routing_number);
     
   }
-}
-
-
-function test()
-{
-  let browser = Aliases.browser;
-  browser.ClickR(94, 347);
-  browser.wnd32768.ClickR(145, 6);
-  browser.ClickR(152, 353);
-  browser.Click();
-  browser.ClickR(405, 347);
-  browser.ClickR(348, 356);
-  browser.Click();
-  browser.Click();
-  browser.DblClick(189, 574);
-  browser.Drag(194, 575, 18, 3);
-  browser.Drag(270, 576, 186, 9);
-  browser.Click();
-  browser.BrowserWindow.Maximize();
-  Aliases.FrameTab5.tabpage.ShellDocObjectView.browser.Click();
 }
