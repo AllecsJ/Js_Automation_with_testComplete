@@ -18,8 +18,7 @@
   count = count + 1;
   
   //LOG THE NUMBER OF ITERATIONS
-  Log.Message("This is iteration: "); 
-  Log.Message(count);
+  Log.Message("This is iteration: "+count); 
   
   }
 }
